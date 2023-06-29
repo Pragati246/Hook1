@@ -1,24 +1,14 @@
 import React, {useState, useEffect} from 'react'
+import FComponenet from './Component/FComponenet';
 
 function App() {
-
-  const [count, setCount] = useState(0);
-  const [data , setData] = useState("Ram"); 
-  useEffect( ()=>{
-    console.log("component mounted")
-  }, [data, count])
-
-  function changeCount(){
-    return setCount(count + 1);
-}
-  function changeData(){
-    return setData("seeta");
-  }
+  const [flag, setFlag] = useState(true);
 return (
     <div className="App">
-      <h1>Button clicked {count} times {data} </h1>
-      <button onClick={changeCount}>click Me</button>
-      <button onClick={changeData}>updateData</button>
+      <div>
+        <button onClick= {() => setFlag(!flag)}>Toggle Function Component</button>
+      </div>
+      {flag ? <FComponenet/> : "" }
       
     </div>
   )
