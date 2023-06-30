@@ -30,7 +30,7 @@ function App() {
       <button onClick={handleInput}>handle inputs</button>
       <div>
         <h1>Random Counter : {counter}</h1>
-        {typeof previousCounterRef.current !== "undefined" && (
+        {typeof previousCounterRef.current !== " " && (
         <h2>Previous Counter : {previousCounterRef.current}</h2>
         )}
         <button onClick={(e) => setCounter(Math.ceil(Math.random()*100))}>Generate Random Number</button>
